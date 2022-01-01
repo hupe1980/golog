@@ -20,6 +20,12 @@ func (l *goLogger) Print(level Level, v ...interface{}) {
 	}
 }
 
+func (l *goLogger) Println(level Level, v ...interface{}) {
+	if l.level >= level {
+		l.log.Println(v...)
+	}
+}
+
 func (l *goLogger) Printf(level Level, format string, v ...interface{}) {
 	if l.level >= level {
 		l.log.Printf(format, v...)
