@@ -8,13 +8,15 @@ import (
 type Level int
 
 const (
-	ERROR Level = iota
+	CRITICAL Level = iota
+	ERROR
 	WARNING
 	INFO
 	DEBUG
 )
 
 var levelNames = []string{
+	"CRITICAL",
 	"ERROR",
 	"WARNING",
 	"INFO",
